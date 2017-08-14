@@ -1,0 +1,34 @@
+{
+  "name": "@travi/matt.travi.org-components",
+  "description": "react components for my profile site",
+  "license": "MIT",
+  "author": "Matt Travi",
+  "repository": "travi-org/matt.travi.org-components",
+  "bugs": "https://github.com/travi-org/matt.travi.org-components/issues",
+  "homepage": "https://github.com/travi-org/matt.travi.org-components#readme",
+  "scripts": {
+    "lint:md": "globstar --node -- markdownlint **/*.md",
+    "tests:unit": "mocha --recursive test/unit",
+    "test": "run-s lint:* coverage",
+    "coverage": "nyc run-s tests:unit",
+    "commitmsg": "commitlint -e",
+    "precommit": "npm test"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "3.1.2",
+    "@travi/any": "1.4.0",
+    "chai": "4.1.1",
+    "cz-conventional-changelog": "2.0.0",
+    "globstar": "1.0.0",
+    "husky": "0.14.3",
+    "markdownlint-cli": "0.3.1",
+    "mocha": "3.5.0",
+    "npm-run-all": "4.0.2",
+    "nyc": "11.1.0"
+  }
+}
