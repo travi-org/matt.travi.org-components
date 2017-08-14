@@ -14,7 +14,9 @@
     "coverage": "nyc run-s test:unit:raw",
     "coverage:report": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "commitmsg": "commitlint -e",
-    "precommit": "npm test"
+    "precommit": "npm test",
+    "start": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "config": {
     "commitizen": {
@@ -40,7 +42,8 @@
     "nyc": "11.1.0",
     "react": "15.6.1",
     "react-dom": "15.6.1",
-    "react-test-renderer": "15.6.1"
+    "react-test-renderer": "15.6.1",
+    "@storybook/react": "^3.2.4"
   },
   "peerDependencies": {
     "react": "^15.6.1",
