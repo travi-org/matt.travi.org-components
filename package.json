@@ -8,6 +8,7 @@
   "homepage": "https://github.com/travi-org/matt.travi.org-components#readme",
   "scripts": {
     "lint:md": "globstar --node -- markdownlint **/*.md",
+    "lint:js": "eslint . .storybook --cache",
     "test:unit:raw": "mocha --recursive test/unit",
     "test:unit": "run-s coverage",
     "test": "run-s lint:* test:*",
@@ -26,8 +27,11 @@
   "devDependencies": {
     "@commitlint/cli": "3.1.3",
     "@commitlint/config-angular": "3.1.1",
+    "@storybook/addon-actions": "3.2.6",
+    "@storybook/addon-links": "3.2.6",
     "@storybook/react": "^3.2.4",
     "@travi/any": "1.4.0",
+    "@travi/eslint-config-travi": "1.5.4",
     "babel-plugin-transform-object-rest-spread": "6.26.0",
     "babel-preset-env": "1.6.0",
     "babel-preset-react": "6.24.1",
