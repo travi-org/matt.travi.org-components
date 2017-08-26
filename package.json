@@ -18,7 +18,9 @@
     "precommit": "npm test",
     "start": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy": "gh-pages -r \"https://$GH_TOKEN@github.com/travi-org/matt.travi.org-components.git\" -d storybook-static/"
+    "deploy": "gh-pages -r \"https://$GH_TOKEN@github.com/travi-org/matt.travi.org-components.git\" -d storybook-static/",
+    "greenkeeper:update-lockfile": "greenkeeper-lockfile-update",
+    "greenkeeper:upload-lockfile": "greenkeeper-lockfile-upload"
   },
   "config": {
     "commitizen": {
@@ -43,6 +45,7 @@
     "enzyme": "2.9.1",
     "gh-pages": "1.0.0",
     "globstar": "1.0.0",
+    "greenkeeper-lockfile": "1.8.1",
     "husky": "0.14.3",
     "markdownlint-cli": "0.3.1",
     "mocha": "3.5.0",
