@@ -1,5 +1,5 @@
 import React from 'react';
-import {AppBar, Toolbar} from 'material-ui';
+import {AppBar, Toolbar, Typography} from 'material-ui';
 import {assert} from 'chai';
 import {shallow} from 'enzyme';
 import Header from '../../../../src/molecules/header';
@@ -9,7 +9,10 @@ suite('header', () => {
     const wrapper = shallow(<Header />);
     const bar = wrapper.find(AppBar);
     const toolbar = bar.find(Toolbar);
+    const siteLogo = toolbar.find(Typography);
+    const logo = siteLogo.find('Logo');
 
-    assert.isTrue(toolbar.exists());
+    assert.equal(siteLogo.prop('type'), 'headline');
+    assert.isTrue(logo.exists());
   });
 });
