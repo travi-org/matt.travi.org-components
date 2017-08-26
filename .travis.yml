@@ -3,6 +3,17 @@ notifications:
   email: false
 branches:
   except:
-    - "/^v\\d+\\.\\d+\\.\\d+$/"
+  - "/^v\\d+\\.\\d+\\.\\d+$/"
 after_install: npm ls >/dev/null
+before_deploy:
+- npm run build-storybook
+- git config --global user.email "$GIT_EMAIL"
+- git config --global user.name "$GIT_NAME"
+deploy:
+- skip_cleanup: true
+  provider: script
+  script: npm run deploy
 after_success: npm run coverage:report
+env:
+  global:
+    secure: fCMfMT5TYR+h/5D0DFj1lJI6MhRZdnN8/RoBCx9oREPGd/Mh71PuLrqr9b5kksMOIuh/2JjkuSm7CsgBd7Ug2JY+yjVV9KxIBD84DePPcCr6ePtsUP5uLufZU1MP5katrCMNfYtUreQuuQb4+cr0JzY/2fsyE895Gi2rGE7K9q9f/bGPM0m1h2gwKao8fIUFRWY9J7rIGbYPHQE6quw/zQM2byJ5+SNKa6xSjV4prfuLY1SDowACcI3O/aPyTUsciZMPW5luvVXVnJNN+iKbnPKjhDAeoN8UE6f1rfz6xVhEmAk40nIrddO+aS9VmMVAV7nQpg4qcUJZZ9UKpagIK+GlOYYEjJy6+MlDwoHpGMZjCc2LBVMPv/AXUSsKpFDZwzTNo5tCZbo1ermM2pulSDb/eZEaFTrmpttPfmBajNF4i/5odKc+RCJs0+Op/zrqpdZbQl8ryB7/2m4uqebS+wJILrc7kr0H5XajttBN0eFCjtfxGxj3WyOmP7gzUYyEhoWE4B8uwB5ZeDUUOmOm3mDmYGKg0nB0bofkTi/VNwnQza+lBy/GsN3AgIxK/tkHnvSFqd22aQki0SZKAAqDEQf+B3Mo27vMqnuBc/hz8hAwRPYBWzyjifT9G+jpkCM27lHtolD43e2+uHRjdHu69XWFXl1x0wgR/89bH0rtUU0=

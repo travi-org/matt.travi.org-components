@@ -17,7 +17,8 @@
     "commitmsg": "commitlint -e",
     "precommit": "npm test",
     "start": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy": "gh-pages -r \"https://$GH_TOKEN@github.com/travi-org/matt.travi.org-components.git\" -d storybook-static/"
   },
   "config": {
     "commitizen": {
@@ -40,6 +41,7 @@
     "codecov": "2.3.0",
     "cz-conventional-changelog": "2.0.0",
     "enzyme": "2.9.1",
+    "gh-pages": "1.0.0",
     "globstar": "1.0.0",
     "husky": "0.14.3",
     "markdownlint-cli": "0.3.1",
