@@ -29,7 +29,6 @@
   },
   "devDependencies": {
     "@commitlint/cli": "3.2.0",
-    "@commitlint/config-angular": "3.1.1",
     "@storybook/addon-actions": "3.2.6",
     "@storybook/addon-links": "3.2.6",
     "@storybook/react": "^3.2.4",
@@ -42,6 +41,7 @@
     "babel-register": "6.26.0",
     "chai": "4.1.2",
     "codecov": "2.3.0",
+    "commitlint-config-travi": "1.1.0",
     "cz-conventional-changelog": "2.0.0",
     "enzyme": "2.9.1",
     "gh-pages": "1.0.0",
