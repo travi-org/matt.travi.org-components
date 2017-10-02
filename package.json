@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "3.2.0",
-    "@storybook/addon-actions": "3.2.11",
+    "@storybook/addon-actions": "3.3.0-alpha.1",
     "@storybook/addon-links": "3.2.6",
     "@storybook/react": "^3.2.4",
     "@travi/any": "1.4.3",
