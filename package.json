@@ -33,7 +33,7 @@
     "@storybook/addon-links": "3.2.6",
     "@storybook/react": "^3.2.4",
     "@travi/any": "1.5.1",
-    "@travi/eslint-config-travi": "1.5.23",
+    "@travi/eslint-config-travi": "1.5.24",
     "babel-env": "2.4.1",
     "babel-plugin-transform-object-rest-spread": "6.26.0",
     "babel-preset-env": "1.6.0",
