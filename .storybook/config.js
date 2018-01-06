@@ -1,10 +1,10 @@
 import React from 'react';
 import {configure, addDecorator} from '@storybook/react';
-import {MuiThemeProvider, createMuiTheme, createPalette} from 'material-ui/styles';
+import {MuiThemeProvider, createMuiTheme} from 'material-ui/styles';
 
 // palette generated at http://mcg.mbitson.com/ from #c80000
 const theme = createMuiTheme({
-  palette: createPalette({
+  palette: {
     primary: {
       50: '#f8e0e0',
       100: '#efb3b3',
@@ -40,7 +40,7 @@ const theme = createMuiTheme({
         '900'
       ]
     }
-  })
+  }
 });
 
 addDecorator(story => (
