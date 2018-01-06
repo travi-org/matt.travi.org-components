@@ -7,6 +7,7 @@
   "bugs": "https://github.com/travi-org/matt.travi.org-components/issues",
   "homepage": "https://github.com/travi-org/matt.travi.org-components#readme",
   "scripts": {
+    "clean": "rimraf storybook-static/ lib/",
     "lint:md": "globstar --node -- markdownlint **/*.md",
     "lint:js": "eslint . .storybook --cache",
     "test:unit:raw": "mocha --recursive test/unit",
@@ -18,6 +19,9 @@
     "precommit": "npm test",
     "start": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "build:js": "rollup -c",
+    "build": "run-s clean build:*",
+    "prepublish": "run-s build",
     "deploy": "gh-pages -r \"https://$GH_TOKEN@github.com/travi-org/matt.travi.org-components.git\" -d storybook-static/",
     "greenkeeper:update-lockfile": "greenkeeper-lockfile-update",
     "greenkeeper:upload-lockfile": "greenkeeper-lockfile-upload"
@@ -36,6 +40,7 @@
     "@travi/eslint-config-travi": "1.6.0",
     "babel-env": "2.4.1",
     "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-plugin-transform-react-remove-prop-types": "0.4.12",
     "babel-preset-env": "1.6.1",
     "babel-preset-react": "6.24.1",
     "babel-register": "6.26.0",
@@ -55,7 +60,11 @@
     "nyc": "11.4.1",
     "react": "16.2.0",
     "react-dom": "16.2.0",
-    "react-test-renderer": "16.2.0"
+    "react-test-renderer": "16.2.0",
+    "rimraf": "2.6.2",
+    "rollup": "0.53.3",
+    "rollup-plugin-babel": "3.0.3",
+    "rollup-plugin-node-resolve": "3.0.0"
   },
   "peerDependencies": {
     "react": "^16.0.0",
