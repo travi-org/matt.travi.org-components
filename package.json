@@ -24,7 +24,11 @@
     "prepublish": "run-s build",
     "deploy": "gh-pages -r \"https://$GH_TOKEN@github.com/travi-org/matt.travi.org-components.git\" -d storybook-static/",
     "greenkeeper:update-lockfile": "greenkeeper-lockfile-update",
-    "greenkeeper:upload-lockfile": "greenkeeper-lockfile-upload"
+    "greenkeeper:upload-lockfile": "greenkeeper-lockfile-upload",
+    "semantic-release": "semantic-release"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "config": {
     "commitizen": {
@@ -64,7 +68,8 @@
     "rimraf": "2.6.2",
     "rollup": "0.53.3",
     "rollup-plugin-babel": "3.0.3",
-    "rollup-plugin-node-resolve": "3.0.0"
+    "rollup-plugin-node-resolve": "3.0.0",
+    "semantic-release": "11.0.2"
   },
   "peerDependencies": {
     "react": "^16.0.0",
