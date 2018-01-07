@@ -42,7 +42,7 @@
     "@commitlint/cli": "5.2.8",
     "@storybook/addon-actions": "3.3.4",
     "@storybook/addon-links": "3.3.3",
-    "@storybook/react": "3.2.4",
+    "@storybook/react": "3.3.4",
     "@travi/any": "1.6.0",
     "@travi/eslint-config-travi": "1.6.0",
     "babel-env": "2.4.1",
