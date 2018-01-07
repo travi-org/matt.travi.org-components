@@ -1,6 +1,7 @@
 {
   "name": "@travi/matt.travi.org-components",
   "description": "react components for my profile site",
+  "version": "0.0.0-semantically-released",
   "license": "MIT",
   "author": "Matt Travi",
   "repository": "travi-org/matt.travi.org-components",
