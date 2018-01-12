@@ -39,7 +39,7 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "6.0.0",
+    "@commitlint/cli": "6.0.2",
     "@storybook/addon-actions": "3.3.7",
     "@storybook/addon-links": "3.3.4",
     "@storybook/react": "3.4.0-alpha.1",
