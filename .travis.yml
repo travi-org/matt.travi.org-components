@@ -6,15 +6,15 @@ branches:
   - "/^v\\d+\\.\\d+\\.\\d+$/"
 after_install: npm ls >/dev/null
 before_script: npm run greenkeeper:update-lockfile
-script:
-- npm test
-- npm run semantic-release
 after_script: npm run greenkeeper:upload-lockfile
 before_deploy:
 - npm run build-storybook
 - git config --global user.email "$GIT_EMAIL"
 - git config --global user.name "$GIT_NAME"
 deploy:
+- provider: script
+  skip_cleanup: true
+  script: npx semantic-release
 - skip_cleanup: true
   provider: script
   script: npm run deploy
