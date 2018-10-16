@@ -11,11 +11,21 @@ export default function Profile() {
 
   return (
     <div className="h-card vcard" id="profile">
-      <a className="p-name fn u-url url u-uid uid" rel="me" href={travi.contact.website}>{travi.name}</a>
+      <a className="p-name fn u-url url u-uid uid" rel="me" href={travi.contact.website}>
+        {travi.name}
+      </a>
 
       <ul>
-        <li title={github.user}><a className="u-url" href={github.url} rel="me">GitHub</a></li>
-        <li title={twitter.user}><a className="u-url" href={twitter.url} rel="me">Twitter</a></li>
+        <li title={github.user}>
+          <a className="u-url" href={github.url} rel="me">
+            GitHub
+          </a>
+        </li>
+        <li title={twitter.user}>
+          <a className="u-url" href={twitter.url} rel="me">
+            Twitter
+          </a>
+        </li>
       </ul>
     </div>
   );

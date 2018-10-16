@@ -9,7 +9,11 @@ suite('layout', () => {
   Child.displayName = 'Child';
 
   test('that the layout includes the header and children', () => {
-    const wrapper = shallow(<Layout><Child /></Layout>);
+    const wrapper = shallow(
+      <Layout>
+        <Child />
+      </Layout>
+    );
 
     assert.isTrue(wrapper.find(Reboot).exists());
     assert.isTrue(wrapper.find('Header').exists());
