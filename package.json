@@ -25,9 +25,7 @@
     "build:js": "rollup -c",
     "build": "run-s clean build:*",
     "prepack": "run-s build",
-    "deploy": "gh-pages -r \"https://$GH_TOKEN@github.com/travi-org/matt.travi.org-components.git\" -d storybook-static/",
-    "greenkeeper:update-lockfile": "greenkeeper-lockfile-update",
-    "greenkeeper:upload-lockfile": "greenkeeper-lockfile-upload"
+    "deploy": "gh-pages -r \"https://$GH_TOKEN@github.com/travi-org/matt.travi.org-components.git\" -d storybook-static/"
   },
   "publishConfig": {
     "access": "public"
@@ -57,7 +55,6 @@
     "enzyme-adapter-react-16": "1.6.0",
     "gh-pages": "2.0.1",
     "globstar": "1.0.0",
-    "greenkeeper-lockfile": "1.15.1",
     "husky": "1.1.2",
     "markdownlint-cli": "0.13.0",
     "microformat-node": "2.0.1",
