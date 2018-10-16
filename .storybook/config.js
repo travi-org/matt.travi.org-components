@@ -1,6 +1,6 @@
 import React from 'react';
 import {configure, addDecorator} from '@storybook/react';
-import {MuiThemeProvider, createMuiTheme} from 'material-ui/styles';
+import {MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
 
 // palette generated at http://mcg.mbitson.com/ from #c80000
 const theme = createMuiTheme({

@@ -1,5 +1,5 @@
 import React from 'react';
-import {AppBar, Toolbar, Typography} from 'material-ui';
+import {AppBar, Toolbar, Typography} from '@material-ui/core';
 import {assert} from 'chai';
 import {shallow} from 'enzyme';
 import Header from '../../../../src/molecules/header';

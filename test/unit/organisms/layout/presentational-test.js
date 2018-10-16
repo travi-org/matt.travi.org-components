@@ -1,5 +1,5 @@
 import React from 'react';
-import {Reboot} from 'material-ui';
+import {CssBaseline} from '@material-ui/core';
 import {shallow} from 'enzyme';
 import {assert} from 'chai';
 import Layout from '../../../../src/organisms/layout';
@@ -15,7 +15,7 @@ suite('layout', () => {
       </Layout>
     );
 
-    assert.isTrue(wrapper.find(Reboot).exists());
+    assert.isTrue(wrapper.find(CssBaseline).exists());
     assert.isTrue(wrapper.find('Header').exists());
     assert.isTrue(wrapper.find('Child').exists());
   });
