@@ -56,7 +56,7 @@
     "enzyme-adapter-react-16": "1.7.1",
     "gh-pages": "2.0.1",
     "globstar": "1.0.0",
-    "husky": "1.2.1",
+    "husky": "1.3.0",
     "microformat-node": "2.0.1",
     "mocha": "5.2.0",
     "npm-run-all": "4.1.5",
