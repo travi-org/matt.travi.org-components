@@ -79,6 +79,7 @@
   },
   "dependencies": {
     "@material-ui/core": "3.3.0",
+    "gatsby-image": "2.0.25",
     "prop-types": "15.6.2",
     "travi": "1.0.0"
   }
