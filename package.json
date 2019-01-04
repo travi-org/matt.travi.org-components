@@ -46,7 +46,7 @@
     "@storybook/react": "4.0.0-rc.0",
     "@travi/any": "1.8.5",
     "@travi/eslint-config-travi": "1.7.0",
-    "babel-loader": "8.0.4",
+    "babel-loader": "8.0.5",
     "babel-plugin-transform-react-remove-prop-types": "0.4.20",
     "chai": "4.2.0",
     "codecov": "3.1.0",
