@@ -16,10 +16,7 @@ export default {
     babel({
       babelrc: false,
       exclude: ['./node_modules/**'],
-      presets: [
-        ['@babel/preset-env', {targets: {node: 'current', browsers: ['last 2 versions']}, modules: false}],
-        '@babel/react'
-      ],
+      presets: [['@travi', {targets: {node: 8, browser: true}, react: true, modules: false}]],
       plugins: [['transform-react-remove-prop-types', {mode: 'wrap'}]]
     })
   ],
