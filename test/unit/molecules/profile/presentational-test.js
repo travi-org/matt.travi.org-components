@@ -7,12 +7,30 @@ import microformats from 'microformat-node';
 import Profile from '../../../../src/molecules/profile';
 
 suite('profile', () => {
-  test('that name is displayed', () => {
+  test('that the avatar is rendered', () => {
+    const avatarDimensions = 400;
+
+    const wrapper = shallow(<Profile />);
+    const avatar = wrapper.find('Avatar');
+
+    assert.equal(avatar.prop('name'), travi.name);
+    assert.equal(avatar.prop('dimensions'), avatarDimensions);
+    assert.equal(avatar.prop('src'), travi.info.image);
+  });
+
+  test('that full name is displayed', () => {
     const wrapper = shallow(<Profile />);
     const fullName = wrapper.find('.fn');
 
     assert.equal(fullName.text(), travi.name);
-    assert.equal(fullName.prop('href'), travi.contact.website);
+    assert.equal(fullName.find('a').prop('href'), travi.contact.website);
+  });
+
+  test('that title is displayed', () => {
+    const wrapper = shallow(<Profile />);
+    const role = wrapper.find('.p-role');
+
+    assert.equal(role.text(), travi.info.label);
   });
 
   test('that social accounts are listed', () => {
@@ -41,11 +59,15 @@ suite('profile', () => {
   });
 
   test('that details are provided as an h-card microformat', () => {
-    microformats.get({html: reactDom.renderToStaticMarkup(<Profile />), textFormat: 'normalized'}, (err, mformats) => {
+    const html = reactDom.renderToStaticMarkup(<Profile />);
+
+    microformats.get({html, textFormat: 'normalized'}, (err, mformats) => {
       const hCard = mformats.items.filter(item => item.type.includes('h-card'))[0];
 
-      assert.equal(hCard.properties.name, travi.name);
-      assert.equal(hCard.properties.uid, travi.contact.website);
+      assert.strictEqual(hCard.properties.name[0], travi.name);
+      assert.strictEqual(hCard.properties.uid[0], travi.contact.website);
+      assert.strictEqual(hCard.properties.role[0], travi.info.label);
+      assert.strictEqual(hCard.properties.photo[0], travi.info.image);
     });
   });
 });

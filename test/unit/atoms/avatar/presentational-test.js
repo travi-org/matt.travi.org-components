@@ -7,18 +7,15 @@ import Avatar from '../../../../src/atoms/avatar';
 suite('avatar', () => {
   test('that the image is rendered', () => {
     const name = any.string();
-    const fixed = {
-      ...any.simpleObject(),
-      width: any.integer(),
-      height: any.integer(),
-      src: any.url(),
-      srcSet: any.url()
-    };
+    const dimensions = any.integer();
+    const src = any.url();
 
-    const wrapper = shallow(<Avatar name={name} fixed={fixed} />);
-    const img = wrapper.find('Image');
+    const wrapper = shallow(<Avatar name={name} dimensions={dimensions} src={src} />);
+    const img = wrapper.find('img');
 
     assert.equal(img.prop('alt'), name);
-    assert.equal(img.prop('fixed'), fixed);
+    assert.equal(img.prop('height'), dimensions);
+    assert.equal(img.prop('width'), dimensions);
+    assert.equal(img.prop('src'), src);
   });
 });

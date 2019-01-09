@@ -1,5 +1,8 @@
 import React from 'react';
 import travi from 'travi';      // eslint-disable-line import/extensions
+import Avatar from '../../atoms/avatar';
+
+const avatarDimensions = 400;
 
 function lookupUseFor(network) {
   return travi.social.filter(account => network === account.network)[0];
@@ -11,9 +14,13 @@ export default function Profile() {
 
   return (
     <div className="h-card vcard" id="profile">
-      <a className="p-name fn u-url url u-uid uid" rel="me" href={travi.contact.website}>
-        {travi.name}
-      </a>
+      <Avatar dimensions={avatarDimensions} src={travi.info.image} name={travi.name} />
+      <h1 className="p-name fn">
+        <a className="u-url url u-uid uid" rel="me" href={travi.contact.website}>
+          {travi.name}
+        </a>
+      </h1>
+      <h2 className="p-role">{travi.info.label}</h2>
 
       <ul>
         <li title={github.user}>
