@@ -1,1 +1,1 @@
-{"presets": [["@travi", {"react": true}]]}
+{"presets": [["@travi", {"react": true}], "@emotion/babel-preset-css-prop"]}

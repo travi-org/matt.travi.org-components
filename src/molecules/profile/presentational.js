@@ -13,7 +13,7 @@ export default function Profile() {
   const github = lookupUseFor('GitHub');
 
   return (
-    <div className="h-card vcard" id="profile">
+    <div className="h-card vcard" id="profile" css={{textAlign: 'center'}}>
       <Avatar dimensions={avatarDimensions} src={travi.info.image} name={travi.name} />
       <h1 className="p-name fn">
         <a className="u-url url u-uid uid" rel="me" href={travi.contact.website}>
@@ -22,7 +22,7 @@ export default function Profile() {
       </h1>
       <h2 className="p-role">{travi.info.label}</h2>
 
-      <ul>
+      <ul css={{display: 'flex', justifyContent: 'center', padding: 0, listStyleType: 'none', li: {margin: 10}}}>
         <li title={github.user}>
           <a className="u-url" href={github.url} rel="me">
             GitHub
