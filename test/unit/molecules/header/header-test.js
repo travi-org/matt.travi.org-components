@@ -12,7 +12,7 @@ suite('header', () => {
     const siteLogo = toolbar.find(Typography);
     const logo = siteLogo.find('Logo');
 
-    assert.equal(siteLogo.prop('type'), 'headline');
+    assert.equal(siteLogo.prop('variant'), 'headline');
     assert.isTrue(logo.exists());
   });
 });
