@@ -51,7 +51,7 @@
     "babel-plugin-transform-react-remove-prop-types": "0.4.20",
     "chai": "4.2.0",
     "codecov": "3.1.0",
-    "commitlint-config-travi": "1.2.34",
+    "commitlint-config-travi": "1.2.35",
     "cz-conventional-changelog": "2.1.0",
     "enzyme": "3.8.0",
     "enzyme-adapter-react-16": "1.7.1",
