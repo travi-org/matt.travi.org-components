@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link, Typography} from '@material-ui/core';
 import travi from 'travi';      // eslint-disable-line import/extensions
 import Avatar from '../../atoms/avatar';
 
@@ -15,23 +16,27 @@ export default function Profile() {
   return (
     <div className="h-card vcard" id="profile" css={{textAlign: 'center', marginTop: 50}}>
       <Avatar dimensions={avatarDimensions} src={travi.info.image} name={travi.name} />
-      <h1 className="p-name fn">
-        <a className="u-url url u-uid uid" rel="me" href={travi.contact.website}>
+      <Typography variant="h1" gutterBottom className="p-name fn">
+        <Link className="u-url url u-uid uid" rel="me" href={travi.contact.website}>
           {travi.name}
-        </a>
-      </h1>
-      <h2 className="p-role">{travi.info.label}</h2>
+        </Link>
+      </Typography>
+      <Typography variant="h2" className="p-role">{travi.info.label}</Typography>
 
       <ul css={{display: 'flex', justifyContent: 'center', padding: 0, listStyleType: 'none', li: {margin: 10}}}>
         <li title={github.user}>
-          <a className="u-url" href={github.url} rel="me">
-            GitHub
-          </a>
+          <Typography variant="button">
+            <Link className="u-url" href={github.url} rel="me">
+              GitHub
+            </Link>
+          </Typography>
         </li>
         <li title={twitter.user}>
-          <a className="u-url" href={twitter.url} rel="me">
-            Twitter
-          </a>
+          <Typography variant="button">
+            <Link className="u-url" href={twitter.url} rel="me">
+              Twitter
+            </Link>
+          </Typography>
         </li>
       </ul>
     </div>
