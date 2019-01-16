@@ -14,7 +14,7 @@ export default function Profile() {
   const github = lookupUseFor('GitHub');
 
   return (
-    <div className="h-card vcard" id="profile" css={{textAlign: 'center', marginTop: 50}}>
+    <div className="h-card vcard" id="profile" css={{textAlign: 'center'}}>
       <Avatar dimensions={avatarDimensions} src={travi.info.image} name={travi.name} />
       <Typography variant="h1" gutterBottom className="p-name fn">
         <Link className="u-url url u-uid uid" rel="me" href={travi.contact.website}>
