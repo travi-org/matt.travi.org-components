@@ -10,9 +10,11 @@ suite('header', () => {
     const bar = wrapper.find(AppBar);
     const toolbar = bar.find(Toolbar);
     const siteLogo = toolbar.find(Typography);
-    const logo = siteLogo.find('Logo');
+    const homepageLink = siteLogo.find('a');
+    const logo = homepageLink.find('Logo');
 
     assert.equal(siteLogo.prop('variant'), 'headline');
+    assert.equal(homepageLink.prop('href'), 'https://matt.travi.org');
     assert.isTrue(logo.exists());
   });
 });
