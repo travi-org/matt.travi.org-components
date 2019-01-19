@@ -41,9 +41,10 @@
   "devDependencies": {
     "@babel/register": "^7.0.0",
     "@emotion/babel-preset-css-prop": "10.0.6",
-    "@storybook/addon-actions": "5.0.0-alpha.1",
-    "@storybook/addon-links": "5.0.0-alpha.1",
-    "@storybook/react": "5.0.0-alpha.1",
+    "@storybook/addon-actions": "5.0.0-alpha.6",
+    "@storybook/addon-info": "5.0.0-alpha.6",
+    "@storybook/addon-links": "5.0.0-alpha.6",
+    "@storybook/react": "5.0.0-alpha.6",
     "@travi/any": "1.8.5",
     "@travi/babel-preset": "3.0.0",
     "@travi/eslint-config-travi": "1.7.0",
