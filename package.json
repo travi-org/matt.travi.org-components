@@ -4,6 +4,7 @@
   "version": "0.0.0-semantically-released",
   "main": "lib/components.cjs.js",
   "module": "lib/components.es.js",
+  "sideEffects": false,
   "license": "MIT",
   "author": "Matt Travi",
   "repository": "travi-org/matt.travi.org-components",
@@ -84,6 +85,7 @@
     "@emotion/core": "10.0.6",
     "@material-ui/core": "3.9.0",
     "@material-ui/icons": "3.0.2",
+    "classnames": "2.2.6",
     "prop-types": "15.6.2",
     "travi": "1.0.0"
   }

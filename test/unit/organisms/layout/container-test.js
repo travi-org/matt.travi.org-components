@@ -1,6 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {assert} from 'chai';
+import Layout from '../../../../src/organisms/layout/presentational';
 import LayoutContainer from '../../../../src/organisms/layout/container';
 
 suite('layout container', () => {
@@ -8,7 +9,7 @@ suite('layout container', () => {
 
   test('that the drawer defaults to closed', () => {
     const wrapper = shallow(<LayoutContainer><Child /></LayoutContainer>);
-    const presentationalLayout = wrapper.find('Layout');
+    const presentationalLayout = wrapper.find(Layout);
 
     assert.isFalse(presentationalLayout.prop('navigationOpen'));
     assert.isTrue(presentationalLayout.find('Child').exists());
@@ -16,12 +17,12 @@ suite('layout container', () => {
 
   test('that the open state of the drawer is toggled by the handler', () => {
     const wrapper = shallow(<LayoutContainer><Child /></LayoutContainer>);
-    const presentationalLayout = wrapper.find('Layout');
+    const presentationalLayout = wrapper.find(Layout);
 
     presentationalLayout.simulate('navigationDrawerToggle');
-    assert.isTrue(wrapper.find('Layout').prop('navigationOpen'));
+    assert.isTrue(wrapper.find(Layout).prop('navigationOpen'));
 
     presentationalLayout.simulate('navigationDrawerToggle');
-    assert.isFalse(wrapper.find('Layout').prop('navigationOpen'));
+    assert.isFalse(wrapper.find(Layout).prop('navigationOpen'));
   });
 });

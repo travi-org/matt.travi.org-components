@@ -3,7 +3,9 @@ import {CssBaseline} from '@material-ui/core';
 import {shallow} from 'enzyme';
 import {assert} from 'chai';
 import any from '@travi/any';
-import Layout from '../../../../src/organisms/layout/presentational';
+import {Layout} from '../../../../src/organisms/layout/presentational';
+import Header from '../../../../src/molecules/header';
+import NavigationDrawer from '../../../../src/molecules/navigation';
 
 suite('layout', () => {
   const Child = () => null;
@@ -18,13 +20,14 @@ suite('layout', () => {
         <Child />
       </Layout>
     );
-    const header = wrapper.find('Header');
-    const navDrawer = wrapper.find('NavigationDrawer');
+    const header = wrapper.find(Header);
+    const navDrawer = wrapper.find(NavigationDrawer);
 
     assert.isTrue(wrapper.find(CssBaseline).exists());
     assert.isTrue(wrapper.find('Child').exists());
 
     assert.equal(header.prop('onNavigationDrawerToggle'), navigationToggleHandler);
+    assert.equal(header.prop('navigationOpen'), navigationOpen);
 
     assert.equal(navDrawer.prop('onToggle'), navigationToggleHandler);
     assert.equal(navDrawer.prop('open'), navigationOpen);

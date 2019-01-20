@@ -1,10 +1,10 @@
 import React from 'react';
 import {Drawer, IconButton, List, ListItem, ListItemIcon, ListItemText} from '@material-ui/core';
-import {ChevronRight, Dvr, Home} from '@material-ui/icons';
+import {ChevronLeft, Dvr, Home} from '@material-ui/icons';
 import {shallow} from 'enzyme';
 import {assert} from 'chai';
 import any from '@travi/any';
-import NavigationDrawer from '../../../../src/molecules/navigation/presentational';
+import {NavigationDrawer} from '../../../../src/molecules/navigation/presentational';
 
 suite('navigation-drawer', () => {
   test('that the drawer is anchored to the left', () => {
@@ -22,7 +22,7 @@ suite('navigation-drawer', () => {
     assert.equal(drawer.prop('open'), open);
 
     assert.equal(closeButton.prop('onClick'), toggleHandler);
-    assert.isTrue(closeButton.find(ChevronRight).exists());
+    assert.isTrue(closeButton.find(ChevronLeft).exists());
 
     const homeNavItem = navList.find(ListItem).at(0);
     assert.equal(homeNavItem.find(ListItemText).prop('primary'), 'Home');
