@@ -19,10 +19,14 @@ suite('layout', () => {
       </Layout>
     );
     const header = wrapper.find('Header');
+    const navDrawer = wrapper.find('NavigationDrawer');
 
     assert.isTrue(wrapper.find(CssBaseline).exists());
     assert.isTrue(wrapper.find('Child').exists());
 
     assert.equal(header.prop('onNavigationDrawerToggle'), navigationToggleHandler);
+
+    assert.equal(navDrawer.prop('onToggle'), navigationToggleHandler);
+    assert.equal(navDrawer.prop('open'), navigationOpen);
   });
 });
