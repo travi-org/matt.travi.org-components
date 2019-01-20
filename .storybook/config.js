@@ -1,6 +1,7 @@
 import React from 'react';
-import {configure, addDecorator} from '@storybook/react';
+import {addDecorator, configure, getStorybook, setAddon} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
+import createPercyAddon from '@percy-io/percy-storybook';
 import {MuiThemeProvider} from '@material-ui/core/styles';
 import {theme} from '../src';
 
@@ -17,4 +18,9 @@ function loadStories() {
 
 addDecorator(withInfo);
 
+const {percyAddon, serializeStories} = createPercyAddon();
+setAddon(percyAddon);
+
 configure(loadStories, module);
+
+serializeStories(getStorybook);
