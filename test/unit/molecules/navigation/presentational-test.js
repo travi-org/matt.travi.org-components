@@ -1,6 +1,7 @@
 import React from 'react';
 import {Drawer, IconButton, List, ListItem, ListItemIcon, ListItemText} from '@material-ui/core';
 import {ChevronLeft, Dvr, Home} from '@material-ui/icons';
+import travi from 'travi';
 import {shallow} from 'enzyme';
 import {assert} from 'chai';
 import any from '@travi/any';
@@ -25,10 +26,14 @@ suite('navigation-drawer', () => {
     assert.isTrue(closeButton.find(ChevronLeft).exists());
 
     const homeNavItem = navList.find(ListItem).at(0);
+    assert.equal(homeNavItem.prop('component'), 'a');
+    assert.equal(homeNavItem.prop('href'), travi.contact.website);
     assert.equal(homeNavItem.find(ListItemText).prop('primary'), 'Home');
     assert.isTrue(homeNavItem.find(ListItemIcon).find(Home).exists());
 
     const presentationsNavItem = navList.find(ListItem).at(1);
+    assert.equal(presentationsNavItem.prop('component'), 'a');
+    assert.equal(presentationsNavItem.prop('href'), 'https://presentations.travi.org');
     assert.equal(presentationsNavItem.find(ListItemText).prop('primary'), 'Presentations');
     assert.isTrue(presentationsNavItem.find(ListItemIcon).find(Dvr).exists());
   });
