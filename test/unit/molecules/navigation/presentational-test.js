@@ -1,5 +1,5 @@
 import React from 'react';
-import {Drawer, IconButton, List, ListItem, ListItemIcon, ListItemText} from '@material-ui/core';
+import {IconButton, List, ListItem, ListItemIcon, ListItemText, SwipeableDrawer} from '@material-ui/core';
 import {ChevronLeft, Dvr, Home} from '@material-ui/icons';
 import travi from 'travi';
 import {shallow} from 'enzyme';
@@ -13,13 +13,15 @@ suite('navigation-drawer', () => {
     const toggleHandler = () => undefined;
 
     const wrapper = shallow(<NavigationDrawer open={open} onToggle={toggleHandler} />);
-    const drawer = wrapper.find(Drawer);
+    const drawer = wrapper.find(SwipeableDrawer);
     const closeButton = drawer.find(IconButton);
     const navList = drawer.find(List);
 
     assert.equal(drawer.prop('anchor'), 'left');
     assert.equal(drawer.prop('variant'), 'persistent');
     assert.equal(drawer.prop('open'), open);
+    assert.equal(drawer.prop('onOpen'), toggleHandler);
+    assert.equal(drawer.prop('onClose'), toggleHandler);
 
     assert.equal(closeButton.prop('onClick'), toggleHandler);
     assert.isTrue(closeButton.find(ChevronLeft).exists());
