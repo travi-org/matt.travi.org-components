@@ -15,8 +15,7 @@ suite('navigation-drawer', () => {
     const wrapper = shallow(<NavigationDrawer open={open} onToggle={toggleHandler} />);
     const drawer = wrapper.find(Drawer);
     const closeButton = drawer.find(IconButton);
-    const nav = drawer.find('nav');
-    const navList = nav.find(List);
+    const navList = drawer.find(List);
 
     assert.equal(drawer.prop('anchor'), 'left');
     assert.equal(drawer.prop('variant'), 'persistent');
@@ -24,6 +23,8 @@ suite('navigation-drawer', () => {
 
     assert.equal(closeButton.prop('onClick'), toggleHandler);
     assert.isTrue(closeButton.find(ChevronLeft).exists());
+
+    assert.equal(navList.prop('component'), 'nav');
 
     const homeNavItem = navList.find(ListItem).at(0);
     assert.equal(homeNavItem.prop('component'), 'a');
