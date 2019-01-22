@@ -3,10 +3,10 @@ import {addDecorator, configure, getStorybook, setAddon} from '@storybook/react'
 import {withInfo} from '@storybook/addon-info';
 import createPercyAddon from '@percy-io/percy-storybook';
 import {MuiThemeProvider} from '@material-ui/core/styles';
-import {theme} from '../src';
+import createTheme from '../src/theme';
 
 addDecorator(story => (
-  <MuiThemeProvider theme={theme}>
+  <MuiThemeProvider theme={createTheme()}>
     {story()}
   </MuiThemeProvider>
 ));
