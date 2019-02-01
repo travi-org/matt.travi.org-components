@@ -52,7 +52,7 @@
     "@travi/babel-preset": "3.0.0",
     "@travi/eslint-config-travi": "1.8.0",
     "babel-loader": "8.0.5",
-    "babel-plugin-transform-react-remove-prop-types": "0.4.23",
+    "babel-plugin-transform-react-remove-prop-types": "0.4.24",
     "chai": "4.2.0",
     "codecov": "3.1.0",
     "commitlint-config-travi": "1.2.37",
