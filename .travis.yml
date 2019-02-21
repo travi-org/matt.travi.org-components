@@ -3,7 +3,7 @@ notifications:
   email: false
 branches:
   except:
-  - "/^v\\d+\\.\\d+\\.\\d+$/"
+  - "/^v\\d+\\.\\d+\\.\\d+(-(alpha|beta)\\.\\d+)?$/"
 before_script: npm ls --production >/dev/null
 before_deploy:
 - npm run build-storybook
@@ -12,7 +12,9 @@ before_deploy:
 deploy:
 - provider: script
   skip_cleanup: true
-  script: npx semantic-release
+  script: npx semantic-release@beta
+  on:
+    all_branches: true
 - skip_cleanup: true
   provider: script
   script: npm run deploy
