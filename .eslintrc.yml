@@ -2,3 +2,7 @@ extends:
   - '@travi'
   - '@travi/react'
   - '@travi/mocha'
+
+overrides:
+  - files: 'test/integration/*-spec.js'
+    extends: '@form8ion/cypress'
