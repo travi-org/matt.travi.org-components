@@ -5,4 +5,4 @@ extends:
 
 overrides:
   - files: 'test/integration/*-spec.js'
-    extends: '@form8ion/cypress'
+    extends: '@travi/cypress'
