@@ -16,7 +16,7 @@
     "lint:js": "eslint . .storybook --cache",
     "test:unit:raw": "mocha --recursive test/unit",
     "test:unit": "run-s coverage",
-    "test:integration": "start-server-and-test start http://localhost:6006 cypress:run",
+    "test:integration": "start-server-and-test 'npm start -- --quiet' http://localhost:6006 'npm run cypress:run -- ${CYPRESS_RECORD_KEY:+--record}'",
     "test": "npm-run-all --print-label --parallel lint:* --parallel test:*",
     "coverage": "nyc run-s test:unit:raw",
     "coverage:report": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
