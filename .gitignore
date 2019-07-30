@@ -2,7 +2,7 @@ node_modules/
 lib/
 .nyc_output/
 storybook-static/
-/cypress/
+/cypress/videos/
 
 .eslintcache
 /.cache/
