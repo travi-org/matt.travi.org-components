@@ -55,7 +55,7 @@
     "@travi/any": "2.0.3",
     "@travi/babel-preset": "3.0.0",
     "@travi/eslint-config": "1.0.12",
-    "@travi/eslint-config-cypress": "1.0.1",
+    "@travi/eslint-config-cypress": "1.0.2",
     "@travi/eslint-config-mocha": "1.0.2",
     "@travi/eslint-config-react": "1.0.1",
     "babel-loader": "8.0.6",
