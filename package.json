@@ -68,7 +68,7 @@
     "enzyme": "3.10.0",
     "enzyme-adapter-react-16": "1.14.0",
     "eslint-plugin-cypress": "^2.6.0",
-    "gh-pages": "2.1.0",
+    "gh-pages": "2.1.1",
     "globstar": "1.0.0",
     "husky": "3.0.1",
     "microformat-node": "2.0.1",
