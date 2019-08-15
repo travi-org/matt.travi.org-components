@@ -3,6 +3,7 @@ lib/
 .nyc_output/
 storybook-static/
 /cypress/videos/
+/cypress/fixtures/
 
 .eslintcache
 /.cache/
