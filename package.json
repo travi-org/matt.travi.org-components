@@ -50,7 +50,7 @@
     "@percy-io/percy-storybook": "2.1.0",
     "@storybook/addon-actions": "^5.2.7",
     "@storybook/addon-info": "^5.2.7",
-    "@storybook/addon-links": "^5.1.9",
+    "@storybook/addon-links": "^5.2.7",
     "@storybook/react": "^5.1.9",
     "@testing-library/cypress": "^5.0.0",
     "@travi/any": "2.0.6",
