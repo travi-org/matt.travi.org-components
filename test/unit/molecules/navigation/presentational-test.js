@@ -18,7 +18,7 @@ suite('navigation-drawer', () => {
     const navList = drawer.find(List);
 
     assert.equal(drawer.prop('anchor'), 'left');
-    assert.equal(drawer.prop('variant'), 'persistent');
+    assert.equal(drawer.prop('variant'), 'temporary');
     assert.equal(drawer.prop('open'), open);
     assert.equal(drawer.prop('onOpen'), toggleHandler);
     assert.equal(drawer.prop('onClose'), toggleHandler);
