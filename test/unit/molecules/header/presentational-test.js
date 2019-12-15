@@ -8,11 +8,8 @@ import {Header} from '../../../../src/molecules/header/presentational';
 suite('header', () => {
   test('that the app-bar from material-ui is used', () => {
     const navigationToggleHandler = () => undefined;
-    const navigationOpen = false;
 
-    const wrapper = shallow(
-      <Header navigationOpen={navigationOpen} onNavigationDrawerToggle={navigationToggleHandler} />
-    );
+    const wrapper = shallow(<Header onNavigationDrawerToggle={navigationToggleHandler} />);
     const bar = wrapper.find(AppBar);
     const toolbar = bar.find(Toolbar);
     const navigationToggleButton = toolbar.find(IconButton);

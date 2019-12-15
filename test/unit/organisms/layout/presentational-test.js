@@ -46,7 +46,6 @@ suite('layout', () => {
     assert.isTrue(themeProvider.find('Child').exists());
 
     assert.equal(header.prop('onNavigationDrawerToggle'), navigationToggleHandler);
-    assert.equal(header.prop('navigationOpen'), navigationOpen);
 
     assert.equal(navDrawer.prop('onToggle'), navigationToggleHandler);
     assert.equal(navDrawer.prop('open'), navigationOpen);
