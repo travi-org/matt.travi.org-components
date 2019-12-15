@@ -2,6 +2,9 @@
   "exclude": [
     "test/",
     "**/*-test.js",
-    "scripts/"
+    "scripts/",
+    "thirdparty-wrappers/",
+    "src/theme.js",
+    "**/styles.js"
   ]
 }
