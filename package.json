@@ -47,7 +47,7 @@
   "devDependencies": {
     "@babel/register": "7.7.4",
     "@emotion/babel-preset-css-prop": "10.0.23",
-    "@percy-io/percy-storybook": "2.1.0",
+    "@percy-io/percy-storybook": "^2.1.0",
     "@storybook/addon-actions": "^5.2.8",
     "@storybook/addon-info": "^5.2.8",
     "@storybook/addon-links": "^5.2.8",
@@ -99,7 +99,6 @@
     "@material-ui/core": "^4.7.2",
     "@material-ui/icons": "^4.5.1",
     "@material-ui/styles": "^4.7.1",
-    "classnames": "2.2.6",
     "prop-types": "15.7.2",
     "travi": "1.0.0"
   }

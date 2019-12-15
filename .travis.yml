@@ -15,7 +15,7 @@ addons:
 jobs:
   include:
   - stage: test
-    before_script: npm ls --production >/dev/null
+    before_script: npm ls >/dev/null
     after_success:
     - npm run coverage:report
     - npm run snapshot
