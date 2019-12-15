@@ -1,8 +1,8 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {assert} from 'chai';
-import Layout from '../../../../src/organisms/layout/presentational';
-import LayoutContainer from '../../../../src/organisms/layout/container';
+import Layout from './presentational';
+import LayoutContainer from './container';
 
 suite('layout container', () => {
   const Child = () => null;

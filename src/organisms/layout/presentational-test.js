@@ -4,11 +4,11 @@ import {shallow} from 'enzyme';
 import {assert} from 'chai';
 import any from '@travi/any';
 import sinon from 'sinon';
-import * as wrappedMaterial from '../../../../thirdparty-wrappers/material-ui';
-import {Layout} from '../../../../src/organisms/layout/presentational';
-import Header from '../../../../src/molecules/header';
-import NavigationDrawer from '../../../../src/molecules/navigation';
-import * as themeCreator from '../../../../src/theme';
+import * as wrappedMaterial from '../../../thirdparty-wrappers/material-ui';
+import {Layout} from './presentational';
+import Header from '../../molecules/header';
+import NavigationDrawer from '../../molecules/navigation';
+import * as themeCreator from '../../theme';
 
 suite('layout', () => {
   let sandbox;

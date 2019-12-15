@@ -5,7 +5,7 @@ import travi from 'travi';                                // eslint-disable-line
 import {shallow} from 'enzyme';
 import {assert} from 'chai';
 import microformats from 'microformat-node';
-import Profile from '../../../../src/molecules/profile';
+import Profile from './index';
 
 suite('profile', () => {
   test('that the avatar is rendered', () => {

@@ -5,7 +5,7 @@ import travi from 'travi';
 import {shallow} from 'enzyme';
 import {assert} from 'chai';
 import any from '@travi/any';
-import {NavigationDrawer} from '../../../../src/molecules/navigation/presentational';
+import {NavigationDrawer} from './presentational';
 
 suite('navigation-drawer', () => {
   test('that the drawer is anchored to the left', () => {

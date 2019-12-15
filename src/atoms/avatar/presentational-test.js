@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {assert} from 'chai';
 import any from '@travi/any';
-import Avatar from '../../../../src/atoms/avatar';
+import Avatar from './index';
 
 suite('avatar', () => {
   test('that the image is rendered', () => {
