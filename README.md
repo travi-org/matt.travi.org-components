@@ -3,7 +3,7 @@
 React components for the [matt.travi.org](https://matt.travi.org) site
 
 <!-- status badges -->
-[![Build Status](https://img.shields.io/travis/travi-org/matt.travi.org-components.svg?style=flat)](https://travis-ci.org/travi-org/matt.travi.org-components)
+[![Build Status](https://img.shields.io/travis/com/travi-org/matt.travi.org-components.svg?style=flat)](https://travis-ci.com/travi-org/matt.travi.org-components)
 [![Codecov](https://img.shields.io/codecov/c/github/travi-org/matt.travi.org-components.svg)](https://codecov.io/github/travi-org/matt.travi.org-components)
 
 ## Usage
