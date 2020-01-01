@@ -3,5 +3,5 @@ import {storiesOf} from '@storybook/react';
 import ContactForm from '.';
 
 storiesOf('Molecules/Contact Form', module).add('default', () => (
-  <ContactForm />
+  <ContactForm name="contact-form-story" />
 ));
