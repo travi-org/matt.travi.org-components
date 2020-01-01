@@ -5,8 +5,9 @@ export default function ContactForm() {
   return (
     <form>
       <ol css={{listStyleType: 'none'}}>
-        <li><TextInput label="Your Name" id="name" /></li>
-        <li><TextInput label="Your Email Address" id="email" type="email" /></li>
+        <li><TextInput label="Name" id="name" /></li>
+        <li><TextInput label="Email Address" id="email" type="email" /></li>
+        <li><TextInput label="Message" id="message" multiline /></li>
       </ol>
     </form>
   );

@@ -26,4 +26,11 @@ suite('text-input', () => {
 
     assert.equal(input.prop('type'), type);
   });
+
+  test('that the multiline prop is passed through', () => {
+    const wrapper = shallow(<Input id={id} label={label} multiline={true} />);
+    const input = wrapper.find(TextField);
+
+    assert.isTrue(input.prop('multiline'));
+  });
 });

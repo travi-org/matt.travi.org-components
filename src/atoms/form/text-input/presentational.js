@@ -1,15 +1,16 @@
 import React from 'react';
-import {string} from 'prop-types';
+import {bool, string} from 'prop-types';
 import {TextField} from '@material-ui/core';
 
-export default function Input({id, label, type}) {
-  return <TextField id={id} label={label} type={type} />;
+export default function Input({id, label, type, multiline}) {
+  return <TextField id={id} label={label} type={type} multiline={multiline} />;
 }
 
 Input.propTypes = {
   id: string.isRequired,
   label: string.isRequired,
-  type: string
+  type: string,
+  multiline: bool
 };
 
 Input.defaultProps = {
