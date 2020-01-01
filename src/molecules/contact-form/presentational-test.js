@@ -15,6 +15,7 @@ suite('contact form', () => {
     assert.equal(nameField.prop('label'), 'Your Name');
 
     assert.equal(emailField.prop('id'), 'email');
+    assert.equal(emailField.prop('type'), 'email');
     assert.equal(emailField.prop('label'), 'Your Email Address');
   });
 });

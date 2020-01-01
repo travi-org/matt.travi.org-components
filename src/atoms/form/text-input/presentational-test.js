@@ -6,14 +6,24 @@ import {assert} from 'chai';
 import Input from './presentational';
 
 suite('text-input', () => {
-  test('that the input is rendered', () => {
-    const id = any.word();
-    const label = any.word();
+  const id = any.word();
+  const label = any.word();
 
+  test('that the input is rendered', () => {
     const wrapper = shallow(<Input id={id} label={label} />);
     const input = wrapper.find(TextField);
 
     assert.equal(input.prop('id'), id);
     assert.equal(input.prop('label'), label);
+    assert.equal(input.prop('type'), 'text');
+  });
+
+  test('that the type can be changed from the default', () => {
+    const type = any.word();
+
+    const wrapper = shallow(<Input id={id} label={label} type={type} />);
+    const input = wrapper.find(TextField);
+
+    assert.equal(input.prop('type'), type);
   });
 });
