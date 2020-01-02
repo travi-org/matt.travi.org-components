@@ -16,6 +16,7 @@ suite('primary button', () => {
     assert.equal(button.prop('variant'), 'contained');
     assert.equal(button.text(), label);
     assert.isUndefined(button.prop('endIcon'));
+    assert.isUndefined(button.prop('type'));
   });
 
   test('that an icon can be rendered at the end', () => {
@@ -25,5 +26,14 @@ suite('primary button', () => {
     const button = wrapper.find(Button);
 
     assert.equal(button.prop('endIcon'), icon);
+  });
+
+  test('that the button type can be overridden', () => {
+    const type = any.word();
+
+    const wrapper = shallow(<PrimaryButton type={type}>{label}</PrimaryButton>);
+    const button = wrapper.find(Button);
+
+    assert.equal(button.prop('type'), type);
   });
 });

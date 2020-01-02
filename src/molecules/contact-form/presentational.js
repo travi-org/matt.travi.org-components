@@ -8,6 +8,7 @@ export default function ContactForm({action, name}) {
   return (
     <form method="POST" action={action} name={name} data-netlify>
       <input type="hidden" name="form-name" value={name} />
+
       <ol css={{listStyleType: 'none'}}>
         <li><TextInput label="Name" id="submitter-name" /></li>
         <li><TextInput label="Email Address" id="email" type="email" /></li>
@@ -15,7 +16,7 @@ export default function ContactForm({action, name}) {
       </ol>
 
       <ol css={{listStyleType: 'none', display: 'inlineBlock'}}>
-        <li><PrimaryButton icon={<Send />}>Contact Travi</PrimaryButton></li>
+        <li><PrimaryButton type="submit" icon={<Send />}>Contact Travi</PrimaryButton></li>
       </ol>
     </form>
   );

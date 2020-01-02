@@ -39,6 +39,7 @@ suite('contact form', () => {
     assert.isTrue(messageField.prop('multiline'));
 
     assert.equal(submitButton.children().text(), 'Contact Travi');
+    assert.equal(submitButton.prop('type'), 'submit');
     assert.equal(submitButton.prop('icon').type.displayName, 'SendIcon');
   });
 });
