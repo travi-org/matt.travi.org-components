@@ -8,7 +8,7 @@ export default function ContactForm({name}) {
   return (
     <form method="POST" name={name} data-netlify>
       <ol css={{listStyleType: 'none'}}>
-        <li><TextInput label="Name" id="name" /></li>
+        <li><TextInput label="Name" id="submitter-name" /></li>
         <li><TextInput label="Email Address" id="email" type="email" /></li>
         <li><TextInput label="Message" id="message" multiline /></li>
       </ol>

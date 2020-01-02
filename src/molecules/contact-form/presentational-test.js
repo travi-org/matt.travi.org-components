@@ -20,7 +20,7 @@ suite('contact form', () => {
     assert.equal(form.prop('name'), name);
     assert.isTrue(form.prop('data-netlify'));
 
-    assert.equal(nameField.prop('id'), 'name');
+    assert.equal(nameField.prop('id'), 'submitter-name');
     assert.equal(nameField.prop('label'), 'Name');
 
     assert.equal(emailField.prop('id'), 'email');
