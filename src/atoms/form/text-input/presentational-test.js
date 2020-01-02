@@ -14,6 +14,7 @@ suite('text-input', () => {
     const input = wrapper.find(TextField);
 
     assert.equal(input.prop('id'), id);
+    assert.equal(input.prop('name'), id);
     assert.equal(input.prop('label'), label);
     assert.equal(input.prop('type'), 'text');
   });
