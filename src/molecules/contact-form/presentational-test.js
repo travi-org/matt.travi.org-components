@@ -6,10 +6,11 @@ import ContactForm from './presentational';
 
 suite('contact form', () => {
   test('that the form renders', () => {
-    const name = any.word();
+    const formName = any.word();
 
-    const wrapper = shallow(<ContactForm name={name} />);
+    const wrapper = shallow(<ContactForm name={formName} />);
     const form = wrapper.find('form');
+    const formNameField = form.find('input');
     const inputs = form.find('Input');
     const nameField = inputs.at(0);
     const emailField = inputs.at(1);
@@ -17,8 +18,12 @@ suite('contact form', () => {
     const submitButton = form.find('PrimaryButton');
 
     assert.equal(form.prop('method'), 'POST');
-    assert.equal(form.prop('name'), name);
+    assert.equal(form.prop('name'), formName);
     assert.isTrue(form.prop('data-netlify'));
+
+    assert.equal(formNameField.prop('type'), 'hidden');
+    assert.equal(formNameField.prop('name'), 'form-name');
+    assert.equal(formNameField.prop('value'), formName);
 
     assert.equal(nameField.prop('id'), 'submitter-name');
     assert.equal(nameField.prop('label'), 'Name');
