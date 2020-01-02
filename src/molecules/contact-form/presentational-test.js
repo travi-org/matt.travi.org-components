@@ -7,8 +7,9 @@ import ContactForm from './presentational';
 suite('contact form', () => {
   test('that the form renders', () => {
     const formName = any.word();
+    const formAction = any.url();
 
-    const wrapper = shallow(<ContactForm name={formName} />);
+    const wrapper = shallow(<ContactForm name={formName} action={formAction} />);
     const form = wrapper.find('form');
     const formNameField = form.find('input');
     const inputs = form.find('Input');
@@ -18,6 +19,7 @@ suite('contact form', () => {
     const submitButton = form.find('PrimaryButton');
 
     assert.equal(form.prop('method'), 'POST');
+    assert.equal(form.prop('action'), formAction);
     assert.equal(form.prop('name'), formName);
     assert.isTrue(form.prop('data-netlify'));
 

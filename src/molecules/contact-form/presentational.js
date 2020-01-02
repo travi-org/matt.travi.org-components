@@ -4,9 +4,9 @@ import {Send} from '@material-ui/icons';
 import TextInput from '../../atoms/form/text-input';
 import PrimaryButton from '../../atoms/buttons/primary';
 
-export default function ContactForm({name}) {
+export default function ContactForm({action, name}) {
   return (
-    <form method="POST" name={name} data-netlify>
+    <form method="POST" action={action} name={name} data-netlify>
       <input type="hidden" name="form-name" value={name} />
       <ol css={{listStyleType: 'none'}}>
         <li><TextInput label="Name" id="submitter-name" /></li>
@@ -22,5 +22,6 @@ export default function ContactForm({name}) {
 }
 
 ContactForm.propTypes = {
-  name: string.isRequired
+  name: string.isRequired,
+  action: string
 };
