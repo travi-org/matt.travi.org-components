@@ -14,6 +14,7 @@ suite('contact form', () => {
     const nameField = inputs.at(0);
     const emailField = inputs.at(1);
     const messageField = inputs.at(2);
+    const submitButton = form.find('PrimaryButton');
 
     assert.equal(form.prop('method'), 'POST');
     assert.equal(form.prop('name'), name);
@@ -29,5 +30,8 @@ suite('contact form', () => {
     assert.equal(messageField.prop('id'), 'message');
     assert.equal(messageField.prop('label'), 'Message');
     assert.isTrue(messageField.prop('multiline'));
+
+    assert.equal(submitButton.children().text(), 'Contact Travi');
+    assert.equal(submitButton.prop('icon').type.displayName, 'SendIcon');
   });
 });
