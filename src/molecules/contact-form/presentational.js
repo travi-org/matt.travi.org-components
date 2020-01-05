@@ -1,8 +1,7 @@
 import React from 'react';
 import {string} from 'prop-types';
 import {Send} from '@material-ui/icons';
-import TextInput from '../../atoms/form/text-input';
-import PrimaryButton from '../../atoms/buttons/primary';
+import {TextInput, PrimaryButton} from '@travi/travi.org-core-components';
 
 export default function ContactForm({action, name}) {
   return (
