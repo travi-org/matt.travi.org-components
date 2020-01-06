@@ -14,7 +14,7 @@ export default {
       babelrc: false,
       exclude: ['./node_modules/**'],
       presets: [
-        ['@travi', {targets: {node: 8, browser: true}, react: true, modules: false}],
+        ['@travi', {targets: {node: 10, browser: true}, react: true, modules: false}],
         '@emotion/babel-preset-css-prop'
       ],
       plugins: [['transform-react-remove-prop-types', {mode: 'wrap'}]]
