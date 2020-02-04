@@ -4,7 +4,7 @@ import {addDecorator, configure, getStorybook, setAddon} from '@storybook/react'
 import {withInfo} from '@storybook/addon-info';
 import createPercyAddon from '@percy-io/percy-storybook';
 import {MuiThemeProvider} from '@material-ui/core/styles';
-import createTheme from '../src/theme';
+import {createTheme} from '@travi/travi.org-theme-components';
 
 const Wrapper = ({story}) => {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
