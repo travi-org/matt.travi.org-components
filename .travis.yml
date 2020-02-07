@@ -19,7 +19,6 @@ import:
 jobs:
   include:
   - stage: test
-    before_script: npm ls >/dev/null
     after_success:
     - npm run coverage:report
     - npm run snapshot
