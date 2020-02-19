@@ -90,7 +90,7 @@
     "rollup-plugin-babel": "4.3.3",
     "rollup-plugin-json": "4.0.0",
     "rollup-plugin-node-resolve": "5.2.0",
-    "sinon": "^8.0.0",
+    "sinon": "^9.0.0",
     "start-server-and-test": "^1.10.6"
   },
   "peerDependencies": {
