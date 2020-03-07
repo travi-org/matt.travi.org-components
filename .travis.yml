@@ -14,23 +14,13 @@ addons:
     - libgconf-2-4
 import:
   - source: form8ion/.travis-ci:node.yml
-  - source: travi-org/.travis-ci:gh-token-env.yml
-  - source: travi-org/.travis-ci:npm-token-publish-env.yml
+  - source: travi-org/.travis-ci:authenticated-semantic-release-stage.yml
 jobs:
   include:
   - stage: test
     after_success:
     - npm run coverage:report
     - npm run snapshot
-  - stage: deploy
-    name: Publish
-    script: skip
-    deploy:
-      provider: script
-      skip_cleanup: true
-      script: npx semantic-release@beta
-      on:
-        all_branches: true
   - stage: deploy
     name: Deploy Documentation
     script: skip
