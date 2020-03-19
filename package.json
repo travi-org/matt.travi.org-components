@@ -9,7 +9,7 @@
   "author": "Matt Travi",
   "repository": "travi-org/matt.travi.org-components",
   "bugs": "https://github.com/travi-org/matt.travi.org-components/issues",
-  "homepage": "https://github.com/travi-org/matt.travi.org-components#readme",
+  "homepage": "https://matt-components.travi.org",
   "scripts": {
     "clean": "rimraf storybook-static/ lib/",
     "lint:md": "remark --quiet . --frail",
@@ -33,7 +33,6 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "prepack": "run-s build",
-    "deploy:gh-pages": "gh-pages -r \"https://$GH_TOKEN@github.com/travi-org/matt.travi.org-components.git\" -d storybook-static/",
     "predeploy:netlify": "npm run build",
     "deploy:netlify": "npx --package netlify-cli netlify deploy --dir=./storybook-static --prod"
   },
@@ -73,7 +72,6 @@
     "cz-conventional-changelog": "3.1.0",
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.2",
-    "gh-pages": "2.1.1",
     "globstar": "1.0.0",
     "husky": "4.2.3",
     "lockfile-lint": "^4.0.0",

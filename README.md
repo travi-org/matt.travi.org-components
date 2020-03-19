@@ -11,7 +11,7 @@ React components for the [matt.travi.org](https://matt.travi.org) site
 <!-- consumer badges -->
 [![npm](https://img.shields.io/npm/v/@travi/matt.travi.org-components.svg?maxAge=2592000)](https://www.npmjs.com/package/@travi/matt.travi.org-components)
 [![license](https://img.shields.io/github/license/travi-org/matt.travi.org-components.svg)](LICENSE)
-[![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://travi-org.github.io/matt.travi.org-components)
+[![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://matt-components.travi.org)
 
 ```sh
 $ npm install @travi/matt.travi.org-components --save
