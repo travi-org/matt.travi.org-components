@@ -25,7 +25,7 @@
     "commitmsg": "commitlint -e",
     "precommit": "npm test",
     "start": "start-storybook --port 6006 --ci",
-    "build-storybook": "build-storybook --quiet",
+    "build:storybook": "build-storybook --quiet",
     "presnapshot": "ANY_SEED=452204917091.8763 run-s build-storybook",
     "snapshot": "percy-storybook --widths=320,1280",
     "build:js": "rollup -c",
@@ -33,7 +33,9 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "prepack": "run-s build",
-    "deploy": "gh-pages -r \"https://$GH_TOKEN@github.com/travi-org/matt.travi.org-components.git\" -d storybook-static/"
+    "deploy:gh-pages": "gh-pages -r \"https://$GH_TOKEN@github.com/travi-org/matt.travi.org-components.git\" -d storybook-static/",
+    "predeploy:netlify": "npm run build",
+    "deploy:netlify": "netlify deploy --dir=./storybook-static --prod"
   },
   "publishConfig": {
     "access": "public"
