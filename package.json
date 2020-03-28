@@ -22,8 +22,6 @@
     "test": "npm-run-all --print-label --parallel lint:* --parallel test:*",
     "coverage": "nyc run-s test:unit:raw",
     "coverage:report": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "commitmsg": "commitlint -e",
-    "precommit": "npm test",
     "start": "start-storybook --port 6006 --ci",
     "build:storybook": "build-storybook --quiet",
     "presnapshot": "ANY_SEED=452204917091.8763 run-s build-storybook",
