@@ -32,7 +32,8 @@
     "cypress:run": "cypress run",
     "prepack": "run-s build",
     "predeploy:netlify": "npm run build",
-    "deploy:netlify": "npx --package netlify-cli netlify deploy --dir=./storybook-static"
+    "deploy:netlify": "npx --package netlify-cli netlify deploy --dir=./storybook-static",
+    "deploy:chromatic": "npx chromatic --build-script-name=build:storybook"
   },
   "publishConfig": {
     "access": "public"
