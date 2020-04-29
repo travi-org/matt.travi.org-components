@@ -21,7 +21,7 @@ jobs:
     deploy:
       provider: script
       edge: true
-      script: npm run publish:chromatic
+      script: npm run deploy:chromatic
       on:
         all_branches: true
 env:
