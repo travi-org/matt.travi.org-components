@@ -8,6 +8,7 @@ import:
 - source: form8ion/.travis-ci:cypress.yml
 - source: travi-org/.travis-ci:authenticated-semantic-release-stage.yml
 - source: travi-org/.travis-ci:authenticated-netlify-deploy-stage.yml
+
 jobs:
   include:
   - stage: test
@@ -24,6 +25,10 @@ jobs:
       script: npm run deploy:chromatic
       on:
         all_branches: true
+stages:
+  - test
+  - deploy
+
 env:
   global:
   - secure: gE2Qq4hFxVYzB5hYJhf1wm1yNUFC86EbTqZztob6AG8Zs21yq7HYKibS9BwwiXVfceYHGGr95XxrjjNbVhGyj+2CMEFXS76lF6jfkIlc+cTY1pLA+vBvyeuHirYcKiN2FfpUCM40goM8CgFU+FdObch255dbhGdwBSSswEn7wn+vmsXLZtG1OtIh7MbIJVKoVu7W7JeprcbxiG7sgfuleqWcFz/FCSo+Pvj++j9YfLvgFhlZMcSus1kXa0r3wmEVM096Xm5JA8vdvnL/nAlbuJ2SMyfbrCG203pm1YRCILBM7KucrjwGw6V7Z7zFn4Ic6mE3bAKT3/UIdX1KppgFGxC/pY48qoqwqlm9lb6HVOSGYKJs6bY0P6CBy9+5ktaXIdCQjgTxpdEp7CsJmVXxZ59RzdkbWThpmAwsLO0gonpRbBOWjld2Pt4Mz7sUQTd0VDVi2xFztxUbfu291zVbYTtvAz77rY2RZBMypl9pxEE32rU4jL5Trq/ofNZPTlodzZdkl+f3OiKLJz3Pw6nVOsRkhVnrMQHOYsNiDvv8rscDFBxgDUH1tsDq/W4raG4OgY0+nN3CcPUirqNZq3qNuty/6aRLh/W815cUWOQ3vGyeA3GtX2GWQP+7q35fHtgIA/7/g7JzKipS4W71G1s/VlOOmbT51KJ84D0rt595M6I=
