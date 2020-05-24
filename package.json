@@ -57,7 +57,7 @@
     "@storybook/addon-links": "6.0.0-alpha.30",
     "@storybook/react": "6.0.0-alpha.30",
     "@testing-library/cypress": "6.0.0",
-    "@travi/any": "2.0.8",
+    "@travi/any": "2.0.9",
     "@travi/babel-preset": "3.0.19",
     "@travi/eslint-config": "1.0.34",
     "@travi/eslint-config-cypress": "1.0.18",
