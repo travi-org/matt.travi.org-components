@@ -50,7 +50,7 @@
   },
   "devDependencies": {
     "@babel/register": "7.12.1",
-    "@emotion/babel-preset-css-prop": "10.2.0",
+    "@emotion/babel-preset-css-prop": "10.2.1",
     "@percy-io/percy-storybook": "2.1.0",
     "@storybook/addon-actions": "6.0.0-alpha.30",
     "@storybook/addon-info": "6.0.0-alpha.2",
