@@ -107,7 +107,7 @@
     "@travi/travi.org-core-components": "1.1.0",
     "polished": "^4.0.0",
     "prop-types": "15.7.2",
-    "snyk": "^1.431.2",
+    "snyk": "^1.465.0",
     "travi": "1.0.0"
   },
   "snyk": true
