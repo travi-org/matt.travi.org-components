@@ -92,7 +92,7 @@
     "rollup-plugin-json": "4.0.0",
     "rollup-plugin-node-resolve": "5.2.0",
     "sinon": "11.1.1",
-    "start-server-and-test": "1.12.5"
+    "start-server-and-test": "1.12.6"
   },
   "peerDependencies": {
     "react": "^16.0.0",
