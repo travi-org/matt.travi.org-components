@@ -84,7 +84,7 @@
     "react-dom": "16.14.0",
     "react-test-renderer": "16.14.0",
     "remark-cli": "10.0.0",
-    "remark-preset-lint-travi": "2.0.3",
+    "remark-preset-lint-travi": "2.0.4",
     "rimraf": "3.0.2",
     "rollup": "2.56.3",
     "rollup-plugin-auto-external": "2.0.0",
