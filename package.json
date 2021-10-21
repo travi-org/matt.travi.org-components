@@ -74,7 +74,7 @@
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.6",
     "globstar": "1.0.0",
-    "husky": "7.0.2",
+    "husky": "7.0.4",
     "lockfile-lint": "4.6.2",
     "microformat-node": "2.0.1",
     "mocha": "9.1.3",
