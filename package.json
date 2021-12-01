@@ -110,5 +110,8 @@
     "snyk": "^1.685.0",
     "travi": "1.0.0"
   },
-  "snyk": true
+  "snyk": true,
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
+  }
 }
