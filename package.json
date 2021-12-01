@@ -52,6 +52,7 @@
     "@babel/register": "7.16.0",
     "@emotion/babel-preset-css-prop": "10.2.1",
     "@percy-io/percy-storybook": "2.1.0",
+    "@rollup/plugin-node-resolve": "13.0.6",
     "@storybook/addon-actions": "6.3.12",
     "@storybook/addon-info": "6.0.0-alpha.2",
     "@storybook/addon-links": "6.3.12",
@@ -90,7 +91,6 @@
     "rollup-plugin-auto-external": "2.0.0",
     "rollup-plugin-babel": "4.4.0",
     "rollup-plugin-json": "4.0.0",
-    "@rollup/plugin-node-resolve": "6.0.0",
     "sinon": "11.1.2",
     "start-server-and-test": "1.14.0"
   },
