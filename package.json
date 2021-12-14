@@ -61,7 +61,7 @@
     "@travi/any": "2.0.19",
     "@travi/babel-preset": "3.0.69",
     "@travi/eslint-config": "1.0.90",
-    "@travi/eslint-config-cypress": "1.0.31",
+    "@travi/eslint-config-cypress": "1.0.32",
     "@travi/eslint-config-mocha": "1.0.14",
     "@travi/eslint-config-react": "1.0.63",
     "@travi/travi.org-theme-components": "1.2.0",
