@@ -67,7 +67,7 @@
     "@travi/travi.org-theme-components": "1.2.0",
     "babel-loader": "8.2.3",
     "babel-plugin-transform-react-remove-prop-types": "0.4.24",
-    "chai": "4.3.4",
+    "chai": "4.3.5",
     "codecov": "3.8.3",
     "commitlint-config-travi": "1.4.8",
     "cypress": "9.3.1",
