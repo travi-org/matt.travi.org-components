@@ -70,7 +70,7 @@
     "chai": "4.3.6",
     "codecov": "3.8.3",
     "commitlint-config-travi": "1.4.10",
-    "cypress": "9.5.3",
+    "cypress": "9.7.0",
     "cz-conventional-changelog": "3.3.0",
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.6",
