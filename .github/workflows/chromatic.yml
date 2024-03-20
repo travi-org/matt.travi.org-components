@@ -5,11 +5,11 @@ jobs:
   upload-data:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
         with:
           fetch-depth: 0
       - uses: bahmutov/npm-install@v1
-      - uses: chromaui/action@v1
+      - uses: chromaui/action@ea1eee60c663ccb7e5d4cfd7a05fcc3a25b7c494 # v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
